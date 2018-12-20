@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Scorekeeper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="82s-hg-PBL">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="score" rowHeight="102" id="3uL-y6-D83" customClass="ScoreCell" customModule="Scorekeeper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="102"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3uL-y6-D83" id="LRh-el-0uB">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="101.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="George: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HjV-a1-ZY9">
+                                                    <rect key="frame" x="149.5" y="40.5" width="76" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ETO-BN-k6F">
+                                                    <rect key="frame" x="15" y="15" width="30" height="72"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                    <state key="normal" title="-">
+                                                        <color key="titleColor" red="0.51210330309999996" green="0.11926769280000001" blue="0.092310512679999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="subtract:" destination="3uL-y6-D83" eventType="touchUpInside" id="Onz-KV-VbE"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K66-0r-HN7">
+                                                    <rect key="frame" x="330" y="26" width="30" height="72"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                    <state key="normal" title="ᐩ">
+                                                        <color key="titleColor" red="0.089123698599999995" green="0.56369413859999995" blue="0.068310331690000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="add:" destination="3uL-y6-D83" eventType="touchUpInside" id="Pp2-cz-m0C"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="K66-0r-HN7" firstAttribute="centerY" secondItem="LRh-el-0uB" secondAttribute="centerY" constant="11" id="7wd-Wr-ZEi"/>
+                                                <constraint firstItem="HjV-a1-ZY9" firstAttribute="centerX" secondItem="LRh-el-0uB" secondAttribute="centerX" id="Pus-Gm-UXA"/>
+                                                <constraint firstItem="ETO-BN-k6F" firstAttribute="centerY" secondItem="LRh-el-0uB" secondAttribute="centerY" id="kbJ-3k-cSt"/>
+                                                <constraint firstItem="ETO-BN-k6F" firstAttribute="leading" secondItem="LRh-el-0uB" secondAttribute="leadingMargin" id="oob-eD-Fdm"/>
+                                                <constraint firstItem="HjV-a1-ZY9" firstAttribute="centerY" secondItem="LRh-el-0uB" secondAttribute="centerY" id="pds-gg-272"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="K66-0r-HN7" secondAttribute="trailing" id="vlf-Lm-4BB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="HjV-a1-ZY9" id="aNY-1q-oWm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="sc0-7M-OLz"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Pms-z5-7Pg"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="82s-hg-PBL" secondAttribute="trailing" id="TIV-Ry-u1B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="82s-hg-PBL" secondAttribute="bottom" id="Yze-q6-FzR"/>
+                            <constraint firstItem="82s-hg-PBL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="amB-tb-8SX"/>
+                            <constraint firstItem="82s-hg-PBL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nbw-kN-HS1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
